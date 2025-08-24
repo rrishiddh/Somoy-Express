@@ -239,7 +239,7 @@ export default function HomePage() {
               Join thousands of satisfied customers who trust Somoy Express for their delivery needs.
             </p>
             <Link href="/auth/register">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold">
                 Start Shipping Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
