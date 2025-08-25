@@ -78,7 +78,7 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -149,7 +149,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
             >
               <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">
@@ -253,7 +253,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="space-y-8 "
             >
               <div>

@@ -298,7 +298,7 @@ export default function SenderDashboard() {
           >
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle>My Parcels</CardTitle>
+                <CardTitle>Parcels Listing</CardTitle>
               </CardHeader>
               <CardContent>
                 {isLoading ? (
