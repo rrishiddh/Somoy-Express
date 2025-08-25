@@ -73,7 +73,7 @@ export default function SenderDashboard() {
 
     const parcels = (parcelsData?.parcels as any as Parcel[]) || [];
 
-  // console.log("parcels sender", parcels);
+  console.log("parcels sender", parcels);
 
   // Filter parcels based on search term
  const filteredParcels = parcels.filter(
