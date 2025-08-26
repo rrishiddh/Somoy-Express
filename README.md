@@ -2,6 +2,12 @@
 
 A modern, responsive and feature-rich courier service frontend application built with Next.js, Redux Toolkit and Tailwind CSS.
 
+## Project Overview
+Somoy Express is a comprehensive parcel delivery management system designed to streamline the entire courier service workflow. Inspired by popular delivery platforms like Pathao Courier and Sundarban this API provides a robust foundation for building modern courier and logistics applications.
+The system implements a three-tier role-based architecture where Senders can create and manage parcel delivery requests, Receivers can track incoming packages and confirm deliveries, and Admins oversee the entire operation with complete system control. Each parcel is assigned a unique tracking ID and follows a complete lifecycle from request to delivery with real-time status updates.
+Built with security-first principles, the API features JWT-based authentication, bcrypt password hashing, and comprehensive input validation. The modular architecture ensures scalability and maintainability, while MongoDB's flexible document structure efficiently handles complex parcel data and embedded status logs.
+Whether you're building a small-scale local delivery service or a large enterprise logistics platform, Somoy Express  provides the essential building blocks with production-ready features including automated fee calculation, delivery confirmation workflows, and comprehensive admin controls for user and parcel management.
+
 ## Features
 
 ### Core Functionality
@@ -41,7 +47,7 @@ A modern, responsive and feature-rich courier service frontend application built
 - **Icons**: Lucide React
 - **Language**: TypeScript
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -198,7 +204,7 @@ The frontend integrates with the somoy-express-api backend:
 
 ### Live Demo (Frontend): [https://somoy-express-rrishiddh.vercel.app/](https://somoy-express-rrishiddh.vercel.app/)
 
-### GitHub-Repo-Backend-API: [https://github.com/rrishiddh/Somoy-Express-API.git](https://github.com/rrishiddh/Somoy-Express-API.git)
+### GitHub-Repo-Backend-API: [https://github.com/rrishiddh/Somoy-Express-API](https://github.com/rrishiddh/Somoy-Express-API)
 
 ### Live Demo (API): [https://somoy-express-api-rrishiddh.vercel.app/](https://somoy-express-api-rrishiddh.vercel.app/)
 
