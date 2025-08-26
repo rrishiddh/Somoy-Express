@@ -1,36 +1,204 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Somoy Express Courier - Frontend
 
-## Getting Started
+A modern, responsive and feature-rich courier service frontend application built with Next.js, Redux Toolkit and Tailwind CSS.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Core Functionality
+- **Role-based Authentication** - Separate dashboards for Senders, Receivers, and Admins
+- **Real-time Package Tracking** - Track packages with detailed status updates
+- **Responsive Design** - Mobile-first approach with seamless tablet and desktop experience
+- **Modern UI/UX** - Clean, professional interface with smooth animations
+
+### For Senders
+- Create parcel delivery requests
+- View all sent packages with status tracking
+- Cancel packages (before dispatch)
+- Real-time fee calculation
+- Comprehensive delivery history
+
+### For Receivers
+- View incoming packages
+- Confirm package delivery
+- Track delivery status in real-time
+- Complete delivery history
+
+### For Admins
+- Comprehensive dashboard with analytics
+- Manage all users (activate/deactivate accounts)
+- Update package status and location
+- View system-wide statistics
+- User and parcel management tools
+
+## Tech Stack
+
+- **Framework**: Next.js v15
+- **State Management**: Redux Toolkit + RTK Query
+- **Styling**: Tailwind CSS + Shadcn/UI
+- **Animations**: Motion Div
+- **Forms**: React Hook Form + Zod validation
+- **Notifications**: React Hot Toast
+- **Icons**: Lucide React
+- **Language**: TypeScript
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rrishiddh/Somoy-Express.git
+   cd somoy-express
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**
+   ```bash
+   cp  .env
+   ```
+   Update the environment variables in `.env.local`:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:5000/api
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+##  Project Structure
+
+```
+src/
+├── app/                    
+│   ├── auth/              
+│   ├── dashboard/         
+│   ├── track/            
+│   ├── about/            
+│   ├── contact/          
+│   ├── globals.css       
+│   ├── layout.tsx        
+│   └── page.tsx          
+├── components/           
+│   ├── ui/               
+│   ├── layout/           
+│   ├── dashboard/        
+│   └── common/           
+├── lib/                  
+│   ├── redux/            
+│   │   ├── api/          
+│   │   ├── slices/       
+│   │   └── store.ts      
+│   └── utils.ts          
+└── types/                
+    └── index.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Authentication & Authorization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **JWT-based authentication** with persistent sessions
+- **Role-based access control** (Sender, Receiver, Admin)
+- **Protected routes** with automatic redirects
+- **Form validation** with comprehensive error handling
 
-## Learn More
+## Key Features Implementation
 
-To learn more about Next.js, take a look at the following resources:
+### Dashboard Analytics
+- Real-time statistics and charts
+- Status distribution visualization
+- User activity metrics
+- Performance indicators
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Package Tracking
+- Unique tracking ID generation
+- Real-time status updates
+- Location tracking
+- Delivery timeline visualization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### State Management
+- Centralized Redux store
+- RTK Query for API caching
+- Optimistic updates
+- Error handling and retry logic
 
-## Deploy on Vercel
+## Dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **@headlessui/react**: ^2.2.7
+* **@hookform/resolvers**: ^5.2.1
+* **@radix-ui/react-alert-dialog**: ^1.1.15
+* **@radix-ui/react-avatar**: ^1.1.10
+* **@radix-ui/react-dialog**: ^1.1.15
+* **@radix-ui/react-dropdown-menu**: ^2.1.16
+* **@radix-ui/react-label**: ^2.1.7
+* **@radix-ui/react-select**: ^2.2.6
+* **@radix-ui/react-slot**: ^1.2.3
+* **@radix-ui/react-tabs**: ^1.1.13
+* **@reduxjs/toolkit**: ^2.8.2
+* **class-variance-authority**: ^0.7.1
+* **clsx**: ^2.1.1
+* **lucide-react**: ^0.541.0
+* **motion**: ^12.23.12
+* **next**: 15.5.0
+* **react**: 19.1.0
+* **react-dom**: 19.1.0
+* **react-hook-form**: ^7.62.0
+* **react-hot-toast**: ^2.6.0
+* **react-redux**: ^9.2.0
+* **tailwind-merge**: ^3.3.1
+* **zod**: ^4.1.0
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Dev Dependencies:
+
+* **@eslint/eslintrc**: ^3
+* **@tailwindcss/postcss**: ^4
+* **@types/node**: ^20
+* **@types/react**: ^19
+* **@types/react-dom**: ^19
+* **eslint**: ^9
+* **eslint-config-next**: 15.5.0
+* **tailwindcss**: ^4
+* **tw-animate-css**: ^1.3.7
+* **typescript**: ^5
+
+
+## API Integration (API Endpoints)
+
+The frontend integrates with the somoy-express-api backend:
+
+### Authentication
+- **Register User** ~ `POST /api/auth/register`
+- **Login User** ~ `POST /api/auth/login`
+
+### User Management
+- **Get User Profile** ~ `GET /api/users/profile`
+- **Get All Users** (Admin) ~ `GET /api/users`
+- **Toggle User Status** (Admin) ~ `PATCH /api/users/toggle-status/:userId`
+
+### Parcel Management
+- **Create Parcel** (Sender) ~ `POST /api/parcels`
+- **Get Sender's Parcels** ~ `GET /api/parcels/my-sent`
+- **Get Receiver's Parcels** ~ `GET /api/parcels/my-received`
+- **Get Parcel by ID** ~ `GET /api/parcels/:id`
+- **Track Parcel** ~ `GET /api/parcels/track/:trackingId`
+- **Cancel Parcel** (Sender) ~ `PATCH /api/parcels/cancel/:id`
+- **Confirm Delivery** (Receiver) ~ `PATCH /api/parcels/confirm-delivery/:id`
+
+### Admin Operations
+- **Get All Parcels** ~ `GET /api/parcels/admin/all`
+- **Update Parcel Status** ~ `PATCH /api/parcels/admin/update-status/:id`
+
+
+## Deployment
+
+### Live Demo (Frontend): [https://somoy-express-rrishiddh.vercel.app/](https://somoy-express-rrishiddh.vercel.app/)
+
+### GitHub-Repo-Backend-API: [https://github.com/rrishiddh/Somoy-Express-API.git](https://github.com/rrishiddh/Somoy-Express-API.git)
+
+### Live Demo (API): [https://somoy-express-api-rrishiddh.vercel.app/](https://somoy-express-api-rrishiddh.vercel.app/)
+
