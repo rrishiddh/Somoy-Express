@@ -84,7 +84,8 @@ src/
 ├── app/                    
 │   ├── auth/              
 │   ├── dashboard/         
-│   ├── track/            
+│   ├── faq/          
+│   ├── track/              
 │   ├── about/            
 │   ├── contact/          
 │   ├── globals.css       

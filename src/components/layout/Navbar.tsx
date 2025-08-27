@@ -8,7 +8,7 @@ import { Menu, X, Package, User, LogOut } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import toast from 'react-hot-toast'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { initializeAuth,logout } from '@/redux/slices/authSlice';
+import { initializeAuth, logout } from '@/redux/slices/authSlice';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,10 +27,11 @@ const Navbar = () => {
     router.push('/')
   }
 
+  // Conditionally include /track only if user exists
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/track', label: 'Track' },
+    ...(user ? [{ href: '/track', label: 'Track' }] : []),
     { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' },
   ]
