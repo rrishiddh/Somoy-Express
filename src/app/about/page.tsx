@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { Shield, Clock, Users, Award, Target, Heart } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-
+import Image from "next/image";
 
 export default function AboutPage() {
   const values = [
@@ -37,14 +37,13 @@ export default function AboutPage() {
   ]
 
   const team = [
-    { name: 'John Doe', position: 'CEO & Founder', description: 'Visionary leader with 15+ years in logistics industry.' },
-    { name: 'Michael Doe', position: 'COO', description: 'Operations expert ensuring smooth delivery processes nationwide.' },
-    { name: 'Jane Doe', position: 'CTO', description: 'Technology innovator building the future of courier services.' },
+    { name: 'Mr. A Rahman', position: 'CEO & Founder', description: 'Visionary leader with 15+ years in logistics industry.', img: '/assets/home/img01.png' },
+    { name: 'Ms. Ayesha', position: 'COO', description: 'Operations expert ensuring smooth delivery processes nationwide.', img: '/assets/home/img02.png' },
+    { name: 'Mr. Hasan', position: 'CTO', description: 'Technology innovator building the future of courier services.', img: '/assets/home/img03.png' },
   ]
 
   return (
     <>
-      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -231,10 +230,14 @@ export default function AboutPage() {
               >
                 <Card className="text-center hover:shadow-lg transition-shadow">
                   <CardContent className="p-8">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-400">
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        width={200}
+                        height={200}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                     <p className="text-blue-600 font-medium mb-3">{member.position}</p>
@@ -246,7 +249,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
     </>
   )
 }

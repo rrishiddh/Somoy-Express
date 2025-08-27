@@ -12,13 +12,9 @@ const Footer = () => {
       { label: 'About Us', href: '/about' },
       { label: 'Contact', href: '/contact' },
       { label: 'Track Package', href: '/track' },
+      { label: 'Express Shipping', href: '/contact' }
     ],
-    services: [
-      { label: 'Same Day Delivery', href: '#' },
-      { label: 'Express Shipping', href: '#' },
-      { label: 'International', href: '#' },
-      { label: 'Bulk Orders', href: '#' },
-    ],
+   
     support: [
       { label: 'Help Center', href: '/contact' },
       { label: 'Privacy Policy', href: '/contact' },
@@ -66,7 +62,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Company Links */}
+          {/* Company & Services Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -88,28 +84,7 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
+         
           {/* Support */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
